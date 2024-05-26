@@ -3,11 +3,15 @@ import 'dotenv/config'
 
 const secretTokenGigaChat = process.env.SECRET_GIGACHAT_KEY ?? ''
 const secretTokenTelegram = process.env.TELEGRAM_BOT_KEY ?? ''
+const secretTokenVK = process.env.VK_BOT_KEY ?? ''
 
 if (secretTokenGigaChat && secretTokenTelegram) {
-  const GigaChat = new GigaTgBotClass(
+  const GigaChat = new GigaTgBotClass({
     secretTokenGigaChat,
-    secretTokenTelegram)
+    secretTokenTelegram,
+    secretTokenVK,
+    messengerType: 'VK'
+  })
 
   GigaChat.startBot()
 

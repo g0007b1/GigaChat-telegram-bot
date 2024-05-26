@@ -8,10 +8,19 @@ const exampleMessage = 'Чтобы обратиться к вашему боту
 
 const availableCommandsMessage = 'Доступные команды'
 
+const messageWasEditedMessage = 'Я пока не умею распознавать изменения текста, напиши заново'
+
+const helpMessage = "Помощь: '/commands', '/example', '/help'"
+
+const startVKMessage = 'Привет! Версия чата: 0.2, чтобы узнать доступные команды и доступных ботов пиши /help'
+
 export const messages = {
   start: startMessage,
   createResponse: createResponseMessage,
   waitForAnswer: waitForAnswerMessage,
   example: exampleMessage,
-  availableCommands: availableCommandsMessage
+  availableCommands: availableCommandsMessage,
+  messageWasEdited: messageWasEditedMessage,
+  help: helpMessage,
+  startVK: startVKMessage
 }
